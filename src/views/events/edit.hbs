@@ -1,0 +1,25 @@
+<section id="create-container">
+    <div class="create-container-info">
+        <h1>Edit Event</h1>
+        <form method="post">
+            <label>Name of the Disaster:</label>
+            <input type="text" id="name" name="name" placeholder="..." value="{{event.name}}">
+            <label>Type of Disaster:</label>
+            <select id="type" name="type">
+                {{#each types}}
+                <option value="{{value}}" {{selected}}>{{label}}</option>
+                {{/each}}
+            </select>
+            <label>Year of the Event:</label>
+            <input type="number" id="elevations" name="year" placeholder="..." value="{{event.year}}">
+            <label>Location:</label>
+            <input type="text" id="location" name="location" placeholder="..." value="{{event.location}}">
+            <label>Image:</label>
+            <input type="text" id="image" name="image" placeholder="http://..." value="{{event.image}}">
+            <label>Description:</label>
+            <textarea id="description" name="description"
+                placeholder="...">{{event.description}}</textarea>
+            <input type="submit" id="btn" value="Submit"></input>
+        </form>
+    </div>
+</section>

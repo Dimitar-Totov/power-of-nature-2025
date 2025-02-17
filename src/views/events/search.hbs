@@ -1,0 +1,32 @@
+<section class="event-search">
+    <h1 id="title">Search</h1>
+
+    <form class="search-form" method="post">
+        <input type="text" class="search-event" name="name" placeholder="Search by Name...">
+        <select id="type" name="type">
+            <option value="Wildfire">Wildfire</option>
+            <option value="Flood">Flood</option>
+            <option value="Earthquake">Earthquake</option>
+            <option value="Hurricane">Hurricane</option>
+            <option value="Drought">Drought</option>
+            <option value="Tsunami">Tsunami</option>
+            <option value="Other">Other</option>
+        </select>
+        <button type="submit" class="btn-search">Search</button>
+    </form>
+
+    <div class="search-result">
+        <div class="search-list">
+            {{#each events}}
+            {{>event}}
+            {{else}}
+            <div class="no-match">
+                <p>No match was found!</p>
+            </div>
+            {{/each}}
+        </div>
+
+    </div>
+
+
+</section>
